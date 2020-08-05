@@ -11,8 +11,8 @@ public class Test {
 	public static void main(String[] args) {
 		try {
         	//Connect to a SideeX WebService server
-        	SideeXWebServiceClientAPI wsClient  = new SideeXWebServiceClientAPI("http://127.0.0.1:50000", ProtocalType.HTTP);
-            File file = new File("testcast.zip");
+        	SideeXWebServiceClientAPI wsClient  = new SideeXWebServiceClientAPI("https://127.0.0.1:50000", ProtocalType.HTTPS_DISABLE);
+            File file = new File("/home/selab/sideex-webservice-api/inputs.zip");
             Map<String, File> fileParams = new HashMap<String, File>();
             fileParams.put(file.getName(), file);
         	
@@ -46,9 +46,10 @@ public class Test {
                     //Download the logs
                     wsClient.download(formData, "./logs.zip", 1);
                     flag = true;
+                    
+                    //Delete the test case and report from the server
+                    System.out.println(wsClient.deleteReport(token));
                 }
-//                //Delete the test case and report from the server
-                System.out.println(wsClient.deleteReport(token));
             }
         } catch (Exception e) {
             e.printStackTrace();
