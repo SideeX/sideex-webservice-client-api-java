@@ -151,8 +151,7 @@ public class SideeXWebServiceClientAPI {
 						// Verify the certificate's public key chain.
 						try {
 							cert.verify(((X509Certificate) ca).getPublicKey());
-						} catch (InvalidKeyException | CertificateException | NoSuchAlgorithmException
-								| NoSuchProviderException | SignatureException e) {
+						} catch (Exception e) {
 							throw new CertificateException(e);
 						}
 					}
