@@ -100,7 +100,7 @@ public class SideeXWebServiceClientAPI {
 			SSLContext sc = SSLContext.getInstance("TLS");
 			sc.init(null, this.trustAllCerts, new SecureRandom());
 			HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
-		} catch (KeyManagementException | NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
