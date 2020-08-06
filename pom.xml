@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.github.SideeX</groupId>
@@ -72,9 +70,9 @@
 
 	<scm>
 		<connection>scm:git:git://github.com/SideeX/sideex-webservice-client-api-java.git</connection>
-		<developerConnection>scm:git:ssh://github.com:SideeX/sideex-webservice-client-api-java.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:SideeX/sideex-webservice-client-api-java.git</developerConnection>
 		<url>https://github.com/SideeX/sideex-webservice-client-api-java</url>
-		<tag>1.0</tag>
+		<tag>sideex-webservice-client-api-java-1.0</tag>
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
