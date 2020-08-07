@@ -10,11 +10,11 @@ public class Test {
 
 	public static void main(String[] args) {
 		try {
-        	//Connect to a SideeX WebService server
-        	SideeXWebServiceClientAPI wsClient  = new SideeXWebServiceClientAPI("https://127.0.0.1:50000", ProtocalType.HTTPS_DISABLE);
-            File file = new File("/home/selab/sideex-webservice-api/inputs.zip");
-            Map<String, File> fileParams = new HashMap<String, File>();
-            fileParams.put(file.getName(), file);
+			//Connect to a SideeX WebService server
+	    	SideeXWebServiceClientAPI wsClient  = new SideeXWebServiceClientAPI("http://127.0.0.1:50000", ProtocalType.HTTP);
+	        File file = new File("testcase.zip");
+	        Map<String, File> fileParams = new HashMap<String, File>();
+	        fileParams.put(file.getName(), file);
         	
             String token = new JSONObject(wsClient.runTestSuite(fileParams)).getString("token"); // get the token
             boolean flag = false;
