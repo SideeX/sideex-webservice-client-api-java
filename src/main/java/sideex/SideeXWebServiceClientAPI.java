@@ -35,6 +35,13 @@ import javax.net.ssl.X509TrustManager;
 
 import java.net.MalformedURLException;
 
+/**
+ * 
+ * This api has been deprecated, please use the updated api "sideex webservice client"
+ * https://search.maven.org/artifact/com.github.SideeX/sideex-webservice-client
+ * 
+ */
+@Deprecated
 public class SideeXWebServiceClientAPI {
 	private String baseURL;
 	private String hostname;

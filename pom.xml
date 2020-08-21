@@ -2,8 +2,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.github.SideeX</groupId>
-	<artifactId>sideex-webservice-client</artifactId>
-	<version>0.9.0-SNAPSHOT</version>
+	<artifactId>sideex-webservice-client-api-java</artifactId>
+	<version>1.0.1-1-SNAPSHOT</version>
 
 	<build>
 		<plugins>
@@ -74,10 +74,10 @@
 	<packaging>jar</packaging>
 
 
-	<name>sideex webservice client</name>
+	<name>sideex webservice client api java</name>
 	<description>
-		SideeX WebService Client API primarily handles the transfer of test suites to a 
-		hosted SideeX WebService server and returns the test reports.
+		This api has been deprecated, please use the updated api "sideex webservice client"
+		https://search.maven.org/artifact/com.github.SideeX/sideex-webservice-client
 	</description>
 	<url>https://github.com/SideeX/sideex-webservice-client-api-java</url>
 
