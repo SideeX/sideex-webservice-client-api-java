@@ -48,7 +48,7 @@ public class Test {
                     flag = true;
                     
                     //Delete the test case and report from the server
-                    System.out.println(wsClient.deleteReport(token));
+                    System.out.println(wsClient.deleteJob(token));
                 }
             }
         } catch (Exception e) {
