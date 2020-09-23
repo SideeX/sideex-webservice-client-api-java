@@ -11,7 +11,7 @@ public class Test {
 	public static void main(String[] args) {
 		try {
 			//Connect to a SideeX WebService server
-	    	SideeXWebServiceClientAPI wsClient  = new SideeXWebServiceClientAPI("http://127.0.0.1:50000", ProtocalType.HTTP);
+	    	SideeXWebServiceClientAPI wsClient  = new SideeXWebServiceClientAPI("http://127.0.0.1:50000", ProtocolType.HTTP);
 	        File file = new File("testcase.zip");
 	        Map<String, File> fileParams = new HashMap<String, File>();
 	        fileParams.put(file.getName(), file);

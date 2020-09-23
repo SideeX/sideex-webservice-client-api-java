@@ -1,5 +1,5 @@
 package sideex;
 
-public enum ProtocalType {
+public enum ProtocolType {
 	HTTP, HTTPS_DISABLE, HTTPS_ENABLE
 }

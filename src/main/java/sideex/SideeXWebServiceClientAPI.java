@@ -52,21 +52,21 @@ public class SideeXWebServiceClientAPI {
 	public static final HostnameVerifier defaultHostnameVerifier = HttpsURLConnection.getDefaultHostnameVerifier();
 	public static final SSLSocketFactory defaultSSLSocketFactory = HttpsURLConnection.getDefaultSSLSocketFactory();
 	
-	public SideeXWebServiceClientAPI(String baseURL, ProtocalType protocalType) throws MalformedURLException {
+	public SideeXWebServiceClientAPI(String baseURL, ProtocolType protocalType) throws MalformedURLException {
 		this.baseURL = baseURL.trim();
 		if (this.baseURL.charAt(this.baseURL.length() - 1) != '/') {
 			this.baseURL = this.baseURL + "/";
 		}
 		this.hostname = new URL(this.baseURL).getHost();
-		if (protocalType == ProtocalType.HTTPS_DISABLE) {
+		if (protocalType == ProtocolType.HTTPS_DISABLE) {
 			setHTTPSDisable();
 		}
 	}
 	
-	public SideeXWebServiceClientAPI(String baseURL, ProtocalType protocalType, String caFilePath) throws MalformedURLException {
+	public SideeXWebServiceClientAPI(String baseURL, ProtocolType protocalType, String caFilePath) throws MalformedURLException {
 		this(baseURL, protocalType);
 		this.caFilePath = caFilePath;
-		if (protocalType == ProtocalType.HTTPS_ENABLE) {
+		if (protocalType == ProtocolType.HTTPS_ENABLE) {
 			try {
 				httpsHostNameVerifier = new HTTPSHostNameVerifier(hostname);// Building SSL Trust
 				setCertificate(this.caFilePath);
