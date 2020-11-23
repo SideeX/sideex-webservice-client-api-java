@@ -179,6 +179,40 @@ public class SideeXWebServiceClientAPI {
 		}
 	}
 	
+	public String echo(){
+		HttpURLConnection conn = null;
+		URL url = null;
+		StringBuilder response = new StringBuilder();
+		try {
+			url = new URL(this.baseURL + "sideex-webservice/echo");
+			conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestMethod("GET");
+			
+			int responseCode = HttpURLConnection.HTTP_OK;
+			responseCode = conn.getResponseCode();
+			if (responseCode == HttpURLConnection.HTTP_OK) {
+				String line;
+				BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+				while ((line = br.readLine()) != null) {
+					response.append(line);
+				}
+				br.close();
+			}
+			conn.disconnect();
+			
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		return response.toString();
+	}
+	
 	public String runTestSuite(Map<String, File> file) throws IOException {
 		URL url = new URL(this.baseURL + "sideex-webservice/runTestSuites");
 		HttpURLConnection conn = null;
