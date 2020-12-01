@@ -13,7 +13,7 @@ public class Test {
 			//Connect to a SideeX WebService server
 	    	SideeXWebServiceClientAPI wsClient  = new SideeXWebServiceClientAPI("http://127.0.0.1:50000", ProtocolType.HTTP);
 	    	
-	    	//echo SideeX WebService server version
+	    	//Gets SideeX WebService server status
 	    	System.out.println(wsClient.echo());
 	    	
 	        File file = new File("testcase.zip");
